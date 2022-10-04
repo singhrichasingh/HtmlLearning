@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.map"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
+
+<script src="javascript/slide.js"></script>
+</head>
+<body>
+<main>
+  <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
+    <h2>
+      Range slider
+    </h2>
+    <div class="css">
+      <input name="range" type="range" min="0" max="100000">
+      <div class="range-output">
+        <output class="output" name="output" for="range">
+          50
+        </output>
+      </div>
+    </div>
+  </form>
+</main>
+</body>
+</html>

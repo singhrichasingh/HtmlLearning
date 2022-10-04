@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FOR INPUT</title>
+        <script src="javascript/inputscript.js"></script>
+        <style>table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }</style>
+    </head>
+    <body>
+     <label>Range Required</label>
+     <input id="range" type="text" placeholder="Enter true/false" required><br/>
+     <button onclick="call();">submit</button>
+      <div id="display" style="display:none;"> 
+          <h3>Please Enter value for Min,Max for Dimable Device.</h3>
+       <p>enter true for dimmable device otherwise false for rangerequired field</p> 
+    </body>
+    <form>
+        <label>Room Name:</label>
+        <input id="room" type="text" required><br/>
+        <label>Device Name:</label>
+        <input id="device" type="text" required><br/>
+        <label>Min:</label>
+        <input id="min" type="number" placeholder="enter minimum value" required><br/>
+        <label>Max:</label>
+        <input id="max" type="number" placeholder="enter maximum value" required>
+    </form>
+    <button onclick="createTable();">Submit</button>
+    <button ondblclick="showTable();">Input Values</button>
+</div>
+    <div id="show" style="display: none;">
+        <table>
+        <thead>
+                <td>Room Name</td>
+                <td>Device Name</td>
+                <td>Min</td>
+                <td>Max</td>
+        </thead>
+        <tbody id="table"></tbody>
+    </table>
+
+    </div>
+</html>

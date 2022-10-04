@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Our DyfoLabs Demo </title>
+        <link rel="stylesheet" href="css/dyfo.css"/>
+        <script src="javascript/dyfolab.js">
+        </script>
+    </head>
+    <body onload="init();" >
+      <div id="alert"> 
+          <marquee id="res" direction="left"> 
+         </marquee>
+         <span id="closebtn" onclick="closebtn();"><button >OK</button></span>
+      </div>
+    <div id="svg" class="col-8 col-s-12" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 1100 740"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!--For Ceiling-->
+        <path d="M 5 0 L 210 190 L 800 215 L 1100 47" class="fillStyle"></path>
+        <path d="M 60 0 L 235 150 L 769 175 L 1090 0" class="fillStyle" ></path>
+        <path d="M 112 45 L 234 140 L 766 165 L 1078 0" class="fillStyle"></path>   
+        <!--For Ceiling Lights-->
+        <ellipse class="ceil1" rx="12" ry="4" cx="107" cy="65" ></ellipse>
+        <ellipse class="ceil1" rx="12"  ry="4" cx="181" cy="132"></ellipse>
+        <ellipse class="ceil1" rx="12" ry="4" cx="305" cy="174" ></ellipse>
+        <ellipse class="ceil1" rx="12" ry="4" cx="472" cy="182" ></ellipse>
+        <ellipse class="ceil1" rx="12" ry="4" cx="647" cy="190"></ellipse>
+        <ellipse class="ceil1" rx="12" ry="3" cx="859" cy="154" ></ellipse>
+        <ellipse class="ceil1" rx="12" ry="3" cx="967" cy="97" ></ellipse>
+        <image class="img" id="image" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image1" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image2" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image3" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image4" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image5" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <image class="img"  id="image6" height="130" width="130" xlink:href="images/spotllight.png" clip-path="url(#path)" ></image>
+        <defs>
+          <clipPath id="path">
+            <path d="M 54 0 L 51 25 L 67 25 L 65 0 " fill="none"></path>
+           </clipPath> 
+        </defs>
+        <!--For ceiling design lighting effect-->
+        <path class="ceil" d="M 374 147 L 310 94 L 229 136 L 234 140 Z"></path>
+        <path class="ceil" d="M 200 0 L 226 24 L 147 70 L 60 0 Z"></path>
+        <path class="ceil" d="M 146 73 L 229 26  L 307 92 L 227 134 Z"></path>
+        <path class="ceil" d="M 272 0 L 231 23  L 204 0 Z"></path>
+        <path class="ceil" d="M 278 0 L 233 25  L 311 89 L 391 46 L 339 0 Z"></path>
+        <path class="ceil" d="M 377 146 L 314 92  L 394 49 L 471 116 L 413 149 Z"></path>
+        <path class="ceil" d="M 514 153 L 473 118  L  416 149 Z"></path>
+        <path class="ceil" d="M 344 0 L 395 45 L 479 0  Z"></path>
+        <path class="ceil" d="M 483 3  L 398 47  L 474 114  L 556 69 Z"></path>
+        <path class="ceil" d="M 518 153 L 476 116 L 558 72 L 631 139 L 598 157  Z"></path>
+        <path class="ceil" d="M 603 157 L 633 141 L 653 159 Z" ></path>
+        <path class="ceil" d="M 484 0 L 559 68 L 644 22 L 618 0 Z"></path>
+        <path class="ceil" d="M 647 25 L 561 70 L 634 137 L 722 89 Z" ></path>
+        <path class="ceil" d="M 657 159 L 637 139 L 724 92 L 791 150 L 766 165 Z" ></path>
+        <path class="ceil" d="M 624 0 L 647 20 L 684 0 Z" ></path>
+        <path class="ceil" d="M 690 0 L 650 23 L 725 87 L 810 40  L 760 0 Z"></path>
+        <path class="ceil" d="M 793 149 L 728 90 L 813 43 L 885 101 Z" ></path>
+        <path class="ceil" d="M 764 0 L 813 39 L 884 0 Z" ></path>
+        <path class="ceil" d="M 888 100 L 816 42 L 890 0 L 900 0 L 973 55 Z"></path>
+        <path class="ceil" d="M 904 0  L 976 54 L 1078 0 Z"></path>
+        <!--Fill radial gradient-->
+        <defs>
+            <radialGradient id="raid1" cx="60%" cy="60%" r="65%" fx="50%" fy="50%">
+              <stop id="stop1" offset="30%"></stop>
+              <stop id="stop2" offset="100%"></stop>
+            </radialGradient>
+          </defs>
+        <!--For wall lines-->
+        <path d="M 210 190 L 210 494" class="fillStyle"></path>
+        <path d="M 800 215 L 800 476 "  class="fillStyle"></path>
+        <!--For Floor line-->
+        <line x1="1200" x2="1030" y1="780" y2="686"  class="fillStyle"></line>
+        <line x1="0" x2="56" y1="742" y2="690"  class="fillStyle"></line>
+        <line x1="325" x2="345" y1="550" y2="550"  class="fillStyle"></line>
+        <line x1="670" x2="640" y1="560" y2="559"  class="fillStyle"></line>
+        <!--For Television rack-->
+        <path d="M 300 468 L 300 474 L 710 474 L 710 468 Z  " class="fillStyle"></path>
+        <!--For Television-->
+        <path d="M 370 468 L 640 468 L 640 316 L 370 316 Z"  class="fillStyle"></path>
+        <path  d="M 376 462 L 634 462 L 634 322 L 376 322 Z" style="stroke:black; stroke-width:1px;fill:url(#tv);"></path>
+        <foreignObject x="295" y="323" width="420" height="140"> 
+         <video width="420" height="140" style=" display:none; overflow: hidden; " loop  >
+          <source src="myvideo.mp4" type="video/mp4">
+          </video> 
+        </foreignObject>
+        <defs>
+            <linearGradient id="tv" x1="376" y1="322" x2="634" y2="462">
+              <stop offset="5%" style="stop-color:gray;stop-opacity:0.2" ></stop>
+              <stop offset="35%" style="stop-color:white;stop-opacity:0" ></stop>
+            </linearGradient>
+          </defs>
+        <!--For Speakers-->
+        <path d="M 320 468 L 340 468 L 340 350 L 320 350 Z"  class="fillStyle"></path>
+        <path d="M 670 468 L 690 468 L 690 350 L 670 350 Z"  class="fillStyle"></path>
+        <circle r="7" cx="330" cy="440"   class="fillStyle" style="stroke-width:3px;"></circle>
+        <circle r="5" cx="330" cy="390"  class="fillStyle"></circle>
+        <circle r="7" cx="680" cy="440"  class="fillStyle" style="stroke-width:3px;"></circle>
+        <circle r="5" cx="680" cy="390"  class="fillStyle"></circle>
+      <g id="sound">
+        <circle class="one " r="8" cx="680" cy="390" ></circle>
+        <circle class="two " r="12" cx="680" cy="390" ></circle>
+        <circle class="three " r="17" cx="680" cy="390" style="stroke-width:2px;" ></circle>
+        <circle class="one " r="8" cx="330" cy="390"  ></circle>
+        <circle class="two hide" r="12" cx="330" cy="390" ></circle>
+        <circle class="three hide" r="17" cx="330" cy="390" style="stroke-width:2px;"></circle>
+        <circle class="one " r="11" cx="330" cy="440"  ></circle>
+        <circle class="two hide" r="16" cx="330" cy="440"></circle>
+        <circle class="three hide" r="22" cx="330" cy="440" style="stroke-width:2px;"></circle>
+        <circle class="one " r="11" cx="680" cy="440" ></circle>
+        <circle class="two hide" r="16" cx="680" cy="440" ></circle>
+        <circle class="three hide" r="22" cx="680" cy="440" style="stroke-width:2px;"></circle>
+        </g>
+        <!--For window rod-->
+        <path d="M 41 95 L 42 105 L 175 210 L 176 204"  class="fillStyle" style="stroke-width:3px;"></path>
+        <path d="M 41 95 L 176 204" class="fillStyle"  style="stroke-width:3px;"></path>
+        <!--For windows-->
+        <path d="M 45 110 L 112 165 L 112 445 L 45 485 Z " class="fillStyle"  ></path>
+        <path d="M 45 125 L 98 169 L 98 441 L 45 473 " class="fillStyle"></path>
+        <path d="M 121 172 L 170 209 L 170 410 L 121 440 Z "  class="fillStyle"></path>
+        <path d="M 121 187 L 156 212 L 156 408 L 121 428 "  class="fillStyle"></path>
+        <line x1="112" y1="165" x2="98" y2="169"   class="fillStyle"></line>
+        <line x1="112" y1="444" x2="98" y2="441"   class="fillStyle"></line>
+        <line x1="170" y1="209" x2="156" y2="212"  class="fillStyle"></line>
+        <line x1="170" y1="410" x2="156" y2="408"  class="fillStyle"></line>
+        <!--Curtain--> 
+         <foreignObject x="0" y="0" width="160" height="500" clip-path="url(#ct1)">
+           <div id="curtain3"></div>
+         </foreignObject> 
+         <foreignObject x="0" y="0" width="180" height="490"  clip-path="url(#ct2)"  >
+          <div id="curtain4"></div>
+        </foreignObject> 
+        <rect id="curtain1" x="41" y="107" width="75"  clip-path="url(#ct1)" ></rect>
+        <rect  id="curtain2" x="117" y="168" width="59" clip-path="url(#ct2)" ></rect>
+        <defs>
+          <clipPath id="ct1">
+              <path d="M 41 107 L 116 165 L 116 455 L 41 499 " class="fillStyle"></path>
+          </clipPath>
+          <clipPath id="ct2">
+            <path d="M 117 167 L 175 210 L 175 417 L 117 452" class="fillStyle"></path>
+        </clipPath>
+        </defs>
+        <!--For AC-->
+        <path d="M 395 218 L 595 225 Q 600 226 605 250 L 604 287 L 404 283 Q 404 282 403 276 L 403 247 Q 404 234 397 221 Z" class="fillStyle" ></path>
+        <path d="M 395 218 L 398 278 L 403 283 " class="fillStyle"  ></path>
+        <path d="M 402 229 L 601 235 "  class="fillStyle" style="stroke-width:5px;"></path>
+        <path d="M 406 243 L 601 248 "  class="fillStyle" style="stroke-width:3px;"></path>
+        <path d="M 415 259 L 590 262 "  class="fillStyle"></path>
+        <g id="acOff">
+          <path d="M 415 267 L 590 271 "  class="fillStyle" ></path>
+        <path d="M 415 276 L 590 280 "  class="fillStyle" ></path>
+        </g>
+        <g id="acOn" style="display:none;">
+        <rect x="415" y="268" width="173" height="10" style="fill:slategrey;"></rect>
+        <path d="M 415 277 L 588 277 " style=" stroke:black;stroke-width:2px;"></path>
+        <path d="M 586 277 L 586 268 " style="stroke-width:4px; stroke:black;"></path>
+        <path d="M 422 280  L 588 280 L 602 287 L 432 287 Z " style="fill:snow; stroke:black"></path>
+        <!--For air Flow-->
+        <image  id="image7" height="40" width="180" xlink:href="images/ac.png"></image>
+        </g>
+        <!--For 2 Seater Sofa-->
+        <path d="M 845 640 L 690 560 " class="fillStyle"></path>
+        <path d="M 815 530 L 690 530 L 767 565 L 845 565  "  class="fillStyle"></path>
+        <line x1="815" x2="845" y1="530" y2="545"  class="fillStyle"></line>
+        <path d="M 767 565 L 845 600"  class="fillStyle"></path>
+        <path d="M 690 560 L 845 640 L 845 680 L 690 592 Z" class="fillStyle"></path>
+        <path d="M 845 680 L 864 690 L 864 550 L 845 540 Z"  class="fillStyle"></path>
+        <path d="M 864 550 L 1030 550 L 1030 685 L 864 690 Z"  class="fillStyle"></path>
+        <path d="M 845 540 L 1010 540  L 1030 550 "  class="fillStyle"></path>
+        <path d="M 690 560 L 690 592 L 670 582 L 670 476 L 690 486 Z"  class="fillStyle"></path>
+        <path d="M 690 486 L 815 486 " class="fillStyle"></path>
+        <path d="M 670 476 L 815 476"  class="fillStyle"></path>
+        <path d="M 1010 540 L 1010 510 L 845 456 "  class="fillStyle"></path>
+        <path d="M 980 540 L 980 510 L 815 456 L 815 530"  class="fillStyle"></path>
+        <line x1="1010" y1="510" x2="980" y2="510" class="fillStyle"></line>
+        <line x1="845" y1="456" x2="815" y2="456"  class="fillStyle"></line>
+        <line x1="767" y1="565" x2="767" y2="600"  class="fillStyle"></line>
+        <!--1 Seater Sofa-->
+        <path d="M 310 610 L 230 690"  class="fillStyle"></path>
+        <path d="M 310 580 L 230 660"  class="fillStyle"></path>
+        <path d="M 140 573 L 175 545 L 310 547 L 230 622"  class="fillStyle"></path>
+        <path d="M 845 640 L 690 560 "  class="fillStyle"></path>
+        <path d="M 310 610 L 325 595 L 325 499 L 310 514 Z  "  class="fillStyle"></path>
+        <path d="M 230 690 L 210 710 L 210 600  L 230 580  Z  " class="fillStyle"></path>
+        <path d="M 210 710 L 210 600 L 55 588 L 55 700 Z  "  class="fillStyle"></path>
+        <path d="M 230 580  L 83 570  L 55 588  "  class="fillStyle"></path>
+        <path d="M 175 497 L 325 499 L 310 514 L 176 510 "  class="fillStyle"></path>
+        <path d="M 83 570  L 83 535  L 155 474 " class="fillStyle"></path>
+        <path d="M 103 570  L 103 535  L 175 474 L  175  545 "  class="fillStyle"></path>
+        <line x1="83" x2="103" y1="535" y2="535" class="fillStyle"></line>
+        <line x1="155" x2="175" y1="474" y2="474" class="fillStyle"></line>
+        <!--Round Table-->
+        <ellipse rx="160" ry="15" cx="505" cy="550" class="fillStyle"></ellipse>
+        <path d="M 344 553 Q 505 580  666 554" style="stroke:gray; stroke-width:7px; fill:none;"></path>
+        <line x1="505" y1="570" x2="505" y2="645" style="stroke:brown; stroke-width:7px; fill:none;"></line>
+        <ellipse rx="45" ry="5" cx="505" cy="645" style="stroke:brown; stroke-width:3px; fill:none;"></ellipse>
+        </svg>
+        </div>
+  <!--Control Panel-->
+          <div id="ctrl" class="col-3 col-s-5">
+            <svg viewBox="0 0 1600 2300"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <image x="0" y="0" height="2300" width="2000" xlink:href="images/mobile-control.png" ></image> 
+                <image id="lvR" x="500" y="300" height="1150" width="1000" onclick=" roomThreeD();" xlink:href="images/livingRoom2D.png" ></image>
+                <foreignObject id="devices" width="400" height="400">
+                  <div id="activeDiv"></div>
+                </foreignObject>
+                <g id="livingRoom3d"  style="display:none;"  >
+                <image  id="lR3d" height="1150" width="1000" xlink:href="images/livingRoom3D.png" transform='translate(500 170)' ></image>
+                <image id="acOff1" height="300" width="300"  onclick="OnAC();" xlink:href="images/airconditioner.png" transform='translate(570 170)' ></image>
+                <image id="ACOn"  height="300" width="300" onclick="ACOff();" xlink:href="images/airconditioner-on.png" transform='translate(570 170)'></image>
+               <image id="TVOff" height="300" width="300" onclick="OnTv();" xlink:href="images/television.png" transform='translate(1040 190)' ></image>
+                <image id="TVOn" height="300" width="300" onclick="offTV();" xlink:href="images/television-on.png" transform='translate(1040 190)' ></image>
+                <image id="speaker1"  height="200" width="300" xlink:href="images/speaker.png" transform='translate(940 330) rotate(-20 -5 -5) scale(0.5)'></image>
+                <image id="speaker2" height="200" width="200"  xlink:href="images/speaker.png" transform='translate(1320 280) rotate(20 15 -5) scale(0.5)' ></image>
+                <image id="speakerOn1"  height="200" width="300" xlink:href="images/speaker-on.png" transform="translate(940 330) rotate(-20 -5 -5) scale(0.5)" ></image>
+                <image id="speakerOn2" height="200" width="200"   xlink:href="images/speaker-on.png" transform='translate(1320 280) rotate(20 15 -5) scale(0.5)' ></image>
+                <image id="curtainOff" height="300" width="300" transform="translate(520 900) rotate(270 -70 0)" onclick="curtainOff();"  xlink:href="images/curtain.png" clip-path="url(#clip-curtain)"></image>
+                <image id="curtainOn"  height="300" width="300" transform="translate(520 900) rotate(270 -70 0)" onclick="curtainOn();" xlink:href="images/curtain-on.png" clip-path="url(#clip-curtain)"></image>
+                <defs>
+                 <clipPath id="clip-curtain"> 
+                   <path d="M 0 0 L 70 300 L 235 300 L 295 0" class="fillStyle" ></path>
+                 </clipPath>
+                </defs>
+                <image id="ceilOFF"  height="180" width="150" onclick="ceilingON();" xlink:href="images/ceiling-light.png" transform='translate(900 650)' ></image>
+                <image id="ceilON"  height="180" width="150" onclick="ceilingOff();" xlink:href="images/ceiling-light-on.png" transform='translate(900 650)'></image>  
+                <foreignObject id="aircontrol" width="200" height="100">
+                  <label for="dyfoAC">AC AirFlow Control:</label>
+                  <input id="dyfoAC" type="range" oninput="ACOnOff();"  min="0" value="0" max="10" step="1"/>   
+                </foreignObject>
+                <foreignObject id="volumecontrol" width="200" height="100">
+                    <label for="volume">Set Volume:</label>
+                    <input type="range" oninput="setVolume();" id="volume" min="0" value="0" max="10" step="1"/>
+                </foreignObject>
+                <foreignObject id="dyfocurtain" width="150" height="300">
+                <label for="cur1up">Curtain Right:</label>
+                <input type="range" oninput="upDown1();" id="cur1up" min="0" value="1" max="10" step="1"/><br/><br/>
+                <label for="cur2up">Curtain Left:</label>
+                <input type="range" oninput="upDown2();" id="cur2up" min="0" value="1" max="10" step="1"/>
+                </foreignObject>
+                <foreignObject id="dyfolights" width="150" height="300">
+                <label for="dim">Ceiling Design Lights:</label>
+                <input type="range" oninput="setDim();" id="dim" min="0" value="0" max="10" step="1"/><br/><br/>
+                <label for="dim1">Ceiling Lights:</label>
+                <input type="range" oninput="setCeilDim();" id="dim1" min="0" value="0" max="10" step="1">
+              </foreignObject>
+              </g>
+              <image id="hometab" x="600" y="1850"   height="140" width="140" onclick="backHome();" xlink:href="images/home-icon.png" ></image>
+            </svg>
+    </div>
+    </body>
+</html>

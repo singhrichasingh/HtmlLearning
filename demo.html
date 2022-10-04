@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>ADMIN Log In page</title>
+    <style>
+    a:link { 
+      text-decoration-line: none;
+      
+    }
+    </style>
+    
+ </head>
+ <body>
+   <h3>Log In</h3>
+     <form>
+      <div width="50%">
+       <fieldset>
+         <legend>ADMIN Log In</legend>
+         <label for="input1">User Name:</label>
+         <input type="text"id="input1" required placeholder="Enter UserName" style="margin:2em;" /><br/>
+         <label for="input2">Password:</label>
+         <input type="password" id="input2" placeholder="Enter Password" required style="margin:2em;"/>
+       </fieldset>
+      </div>
+    </form>
+    <button style="margin:2em;"><a target="_self" href="input.html" >Log In</a></button>
+  <p>Click the button to wait 3 seconds, then alert "Hello".</p>
+  <button onclick="myFunction()">Try it</button>
+<script>
+var myVar;
+function myFunction() {
+  myVar = setTimeout(alertFunc, 3000);
+}
+function alertFunc() {
+  var btn= document.querySelector("button");
+  btn.innerHTML="cancel";
+  alert("hello")
+}
+</script>
+</body>
+</html>

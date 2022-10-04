@@ -1,0 +1,25 @@
+#btn{
+    background-color: blue;
+    font-size: 12px;
+    height: 26px;
+    width:116px;
+}
+#btn:hover{
+    height:30px;
+    width:150px;
+    box-shadow: bisque;
+}
+#mypara{
+    width:100%;
+    height:5rem;
+}
+#list{
+    width:20%;
+    background-color:black;
+}
+#list:hover{
+    background-color:peachpuff;
+}
+#list:focus{
+    background-color:white;
+}

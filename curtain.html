@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+height:2000px;
+  background: #fff;
+}
+
+#mySVG {
+  position: fixed;
+  top: 10%;
+  left:40%;
+  width: 375px;
+  height: 500px;
+  margin-left:-50px;
+  border: 10px aqua groove;
+  
+}
+.VerticalLine{
+  width:373px;
+  height:25px;
+  background:aqua;
+  border:0px;
+  position:fixed;
+  top:40%;
+  left:37.45%;
+
+}
+.HorizontaLine{
+  width:25px;
+  height:500px;
+  background:aqua;
+  position:fixed;
+  border:0px;
+  top:10.3%;
+  left:48.2%;
+}
+</style>
+</head>
+<body>
+
+
+<svg id="mySVG">
+  <path fill="none" stroke="aqua" stroke-width="450" id="curtain" d="M150 0 L150 500" />
+</svg>
+  <hr class="VerticalLine" />
+  <hr class="HorizontaLine" />
+  </div>
+
+<script>
+// Get the id of the <path> element and the length of <path>
+var curtain = document.getElementById("curtain");
+var length = curtain.getTotalLength();
+
+// The start position of the drawing
+curtain.style.strokeDasharray = length;
+
+// Hide the curtain by offsetting dash. Remove this line to show the curtain before scroll draw
+curtain.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+  var draw = length * scrollpercent;
+  
+  // Reverse the drawing (when scrolling upwards)
+  curtain.style.strokeDashoffset = length - draw;
+}
+</script>
+
+</body>
+</html>

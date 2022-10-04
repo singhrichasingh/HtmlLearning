@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script>
+      function match(){
+          var first=document.querySelector("#first");
+          var last=document.querySelector("#last");
+          var val1=first.value;
+          var val2=last.value;
+          if(val1==val2){
+              alert("ok");
+          }
+          }
+   </script>
+  </head>  
+  <body>
+      <label for="first">First Name</label>
+      <input id="first" type="text" /><br/><br/>
+      <label for="last">Last Name</label>
+      <input id="last" type="text" oninput="match();"  onchange="match();"/>
+  </body>
+</html>

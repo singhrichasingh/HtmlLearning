@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> My Game</title>
+    <style> 
+        #myCanvas{border:2px solid black;
+        }
+       </style>  
+    <script> 
+    var canvas, ctx;
+    var x = 0;
+        var y = 0;
+        var c = 2;
+        window.onload = function init() {
+      canvas = document.querySelector("#myCanvas");
+      ctx = canvas.getContext('2d');
+      gameSnake();
+};
+function gameSnake(){
+drawSnake(x,y);
+moveSnake(x,y);
+requestAnimationFrame(gameSnake);
+}
+function drawSnake(x, y) {
+ctx.clearRect(0,0,500,500);  
+ctx.save();
+ctx.translate(x,y);
+ctx.fillRect(0,0, 20, 20);
+ctx.restore();
+}
+function moveSnake(){
+function up(){
+    x=x;
+    y=y-c; 
+   drawSnake(x,y);
+   return {x:x, y:y};
+}
+}
+ function moveUp(){ 
+    x=x;
+    y=y-c; 
+   drawSnake(x,y);
+   return {x:x, y:y};
+}
+function moveDown(){ 
+    x=x;
+    y=y+c; 
+   drawSnake(x,y);
+   return {x:x, y:y};
+}
+function moveLeft(){ 
+    x=x-c;
+    y=y; 
+   drawSnake(x,y);
+   return {x:x, y:y};
+}
+function moveRight(){ 
+    x=x+c;
+    y=y; 
+   drawSnake(x,y);
+   return {x:x, y:y};
+}
+</script>
+   
+</head>
+<body>
+   <canvas id="myCanvas" width="500" height="500"></canvas>
+   <button id="up" onclick="moveUp();" onmouseover="up();">UP</button>
+    <button id="down" onclick="moveDown();" onmouseover="down();"  >DOWN</button>
+    <button id="left" onclick="moveLeft();" onmouse="left();">LEFT</button>
+    <button id="right" onclick="moveRight();" onmouseover="right();">RIGHT</button>
+    <button id="quit">QUIT</button>
+    <button id="resume">RESUME</button>
+</body>
+</html> 
